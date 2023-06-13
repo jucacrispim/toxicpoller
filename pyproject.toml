@@ -39,3 +39,6 @@ include = ["toxicpoller"]
 
 [tool.setuptools.dynamic]
 version = {attr = "toxicpoller.__version__"}
+
+[project.scripts]
+toxicpoller = "toxicpoller.cmds:main"
