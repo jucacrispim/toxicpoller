@@ -49,8 +49,8 @@ class PollerProtocol(BaseToxicProtocol):
             since = {k: string2datetime(v) for k, v in body['since'].items()}
         else:
             since = {}
-        known_branches = body['known_branches']
-        branches_conf = body['branches_conf']
+        known_branches = body.get('known_branches', [])
+        branches_conf = body.get('branches_conf', [])
         external = body.get('external')
         conffile = body.get('conffile', 'toxicbuild.yml')
         poller = Poller(repo_id, url, branches_conf, since, known_branches,
