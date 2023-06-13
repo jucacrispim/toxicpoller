@@ -3,22 +3,22 @@
 import json
 import os
 
-amqp_host = os.environ.get('AMQPHOST', 'localhost')
-amqp_port = int(os.environ.get('AMQPPORT', 5672))
-amqp_login = os.environ.get('AMQPLOGIN')
-amqp_virtualhost = os.environ.get('AMQPVIRTUALHOST')
-amqp_password = os.environ.get('AMQPASSWORD')
+# amqp_host = os.environ.get('AMQPHOST', 'localhost')
+# amqp_port = int(os.environ.get('AMQPPORT', 5672))
+# amqp_login = os.environ.get('AMQPLOGIN')
+# amqp_virtualhost = os.environ.get('AMQPVIRTUALHOST')
+# amqp_password = os.environ.get('AMQPASSWORD')
 
-RABBITMQ_CONNECTION = {'host': amqp_host, 'port': amqp_port}
+# RABBITMQ_CONNECTION = {'host': amqp_host, 'port': amqp_port}
 
-if amqp_login:
-    RABBITMQ_CONNECTION['login'] = amqp_login
+# if amqp_login:
+#     RABBITMQ_CONNECTION['login'] = amqp_login
 
-if amqp_virtualhost:
-    RABBITMQ_CONNECTION['virtualhost'] = amqp_virtualhost
+# if amqp_virtualhost:
+#     RABBITMQ_CONNECTION['virtualhost'] = amqp_virtualhost
 
-if amqp_password:
-    RABBITMQ_CONNECTION['password'] = amqp_password
+# if amqp_password:
+#     RABBITMQ_CONNECTION['password'] = amqp_password
 
 ACCESS_TOKEN = os.environ.get('POLLER_ENCRYPTED_TOKEN', '{{ACCESS_TOKEN}}')
 
