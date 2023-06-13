@@ -1,5 +1,5 @@
-Toxicpoller: Fetch changes on repositories for toxicbuild
-=========================================================
+Toxicpoller: Fetches changes on remote repositories
+===================================================
 
 Toxicpoller is part of toxicbuild.
 
