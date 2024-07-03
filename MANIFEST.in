@@ -1,0 +1,3 @@
+recursive-include toxicpoller/templates *
+
+recursive-exclude toxicpoller/templates *~

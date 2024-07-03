@@ -36,6 +36,7 @@ classifiers = [
 where = ["."]
 exclude = ["tests*"]
 include = ["toxicpoller"]
+namespaces = true
 
 [tool.setuptools.dynamic]
 version = {attr = "toxicpoller.__version__"}
