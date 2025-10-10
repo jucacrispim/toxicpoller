@@ -30,7 +30,9 @@ from . import REPO_DIR, OTHER_REPO_DIR, start_poller, stop_poller
 
 def setUpModule():
     from toxicpoller import settings
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     start_poller()
     loop.run_until_complete(common_setup(settings))
 

@@ -18,7 +18,9 @@ create_settings()
 
 from toxicpoller import settings  # noqa
 
-loop = asyncio.get_event_loop()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
 loop.run_until_complete(common_setup(settings))
 
 from toxiccommon.coordination import ToxicZKClient  # noqa: E402

@@ -2,7 +2,6 @@
 
 import os
 import sys
-from unittest import TestCase
 
 from tests import TEST_DATA_DIR
 
@@ -19,29 +18,6 @@ if not toxicpoller_conf:
     os.environ['TOXICPOLLER_SETTINGS'] = toxicpoller_conf
 
 
-class BaseFunctionalTest(TestCase):
-    """An AsyncTestCase that a slave process on
-    setUpClass and stops it on tearDownClass"""
-
-    @classmethod
-    def start_poller(cls):
-        start_poller()
-
-    @classmethod
-    def stop_poller(cls):
-        stop_poller()
-
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        cls.start_poller()
-
-    @classmethod
-    def tearDownClass(cls):
-        super().tearDownClass()
-        cls.stop_poller()
-
-
 def start_poller():
     """Starts an slave server in a new process for tests"""
 
@@ -53,7 +29,6 @@ def start_poller():
 
     if toxicpoller_conf:
         cmd += ['-c', toxicpoller_conf]
-
     os.system(' '.join(cmd))
 
 

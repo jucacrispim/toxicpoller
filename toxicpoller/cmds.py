@@ -18,8 +18,8 @@
 
 # pylint: disable=all
 
+import importlib
 import os
-import pkg_resources
 from secrets import token_urlsafe
 import shutil
 import sys
@@ -75,8 +75,8 @@ def create(root_dir, no_token=False):
     os.makedirs(root_dir)
 
     template_fname = 'toxicpoller.conf.tmpl'
-    template_dir = pkg_resources.resource_filename('toxicpoller',
-                                                   'templates')
+    template_dir = str(importlib.resources.files(
+        'toxicpoller').joinpath('templates'))
     template_file = os.path.join(template_dir, template_fname)
     dest_file = os.path.join(root_dir, 'toxicpoller.conf')
     shutil.copyfile(template_file, dest_file)
