@@ -1,7 +1,11 @@
 Changelog
 =========
 
-* v0.10.0
+* v0.10.2
+
+  - Removes pkg_resources in favor of importlib.resources
+
+* v0.10.1
 
   - Fix packaging
 
