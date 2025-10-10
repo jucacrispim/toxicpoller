@@ -48,6 +48,8 @@ builders:
 
       - name: python-venv
         pyversion: python3.13
+        extra_indexes:
+          - 'https://pypi.poraodojuca.dev'
 
     steps:
       - name: Build docs
