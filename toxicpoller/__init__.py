@@ -4,7 +4,7 @@
 
 from toxiccore.conf import Settings
 
-__version__ = '0.10.2'
+__version__ = '0.10.3'
 
 ENVVAR = 'TOXICPOLLER_SETTINGS'
 DEFAULT_SETTINGS = 'toxicpoller.conf'

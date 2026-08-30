@@ -1,6 +1,10 @@
 Changelog
 =========
 
+* v0.10.3
+
+  - Update toxiccore
+
 * v0.10.2
 
   - Removes pkg_resources in favor of importlib.resources
