@@ -15,8 +15,8 @@ description = "toxicpoller: fetch changes from repositories for toxicbuild"
 readme = "README.md"
 
 dependencies = [
-    'toxiccore==0.13.5',
-    'toxiccommon>=0.10.0',
+    'toxiccore==0.13.6',
+    'toxiccommon==0.12.2',
 ]
 
 classifiers = [

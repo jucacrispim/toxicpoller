@@ -1,6 +1,6 @@
 # put your requirements here
-toxiccore==0.13.5
-toxiccommon>=0.10.0
+toxiccore==0.13.6
+toxiccommon>=0.12.2
 pytest==7.3.2
 pytest-cov==4.1.0
 pytest-cover==3.0.0
