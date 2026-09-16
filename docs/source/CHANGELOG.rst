@@ -1,6 +1,13 @@
 Changelog
 =========
 
+* v0.10.6
+
+  - Fix missing ``importlib.resources`` import that broke ``create`` on a
+    fresh virtualenv
+  - Use ``toxiccore.cmd``'s ``main`` so the console script exits with status
+    0 after ``create``
+
 * v0.10.5
 
   - Print token with a stable marker
