@@ -18,14 +18,14 @@
 
 # pylint: disable=all
 
-import importlib
+import importlib.resources
 import os
 from secrets import token_urlsafe
 import shutil
 import sys
 from time import sleep
 
-from mando import main, command
+from toxiccore.cmd import command, main
 
 from toxiccommon import ToxicZKClient, BaseInterface
 
